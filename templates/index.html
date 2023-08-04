@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Restaurant Recommendations</h1>
+        <form method="post">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="cuisine">Cuisine:</label>
+            <input type="text" id="cuisine" name="cuisine" required>
+            <button type="submit">Find Restaurants</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
