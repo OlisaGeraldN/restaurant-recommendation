@@ -61,6 +61,17 @@
 
         .visit-yelp-link {
             margin-top: 10px;
+            
+        }
+
+        .visit-yelp-link a{
+            text-decoration: none !important;
+    padding: 10px;
+    background-color: #fbb405;
+    color: black;
+    border-radius: 20px;
+    font-size: initial;
+    font-weight: 500;
         }
 
         .header {
@@ -101,7 +112,7 @@
         <ul>
             {% for restaurant in restaurants %}
             <li>
-                <img src="{{ restaurant['image_url'] }}" alt="{{ restaurant['name'] }}" class="restaurant-image">
+                <img src="{{ restaurant['image_url'] }}" alt="{{ restaurant['name'] }}" class="restaurant-image" style="margin-right: 20px;">
                 <div class="restaurant-info">
                     <h3>{{ restaurant['name'] }}</h3>
                     <p><strong>Rating:</strong> {{ restaurant['rating'] }}</p>
@@ -109,7 +120,7 @@
                     <p><strong>Phone:</strong> {{ restaurant['display_phone'] }}</p>
                 </div>
                 <div class="visit-yelp-link">
-                    <a href="{{ restaurant['url'] }}" target="_blank">Visit Yelp Page</a>
+                    <a href="{{ restaurant['url'] }}" target="_blank">Visit Page</a>
                 </div>
             </li>
             {% endfor %}
